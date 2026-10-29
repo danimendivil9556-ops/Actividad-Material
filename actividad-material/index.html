@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Panel de Tareas - Material Design</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div>
+      <h1>Gestor Académico</h1>
+      <p>Organiza tus tareas y proyectos escolares de forma eficiente.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="tarjeta">
+      <h2>Nueva tarea</h2>
+      <form id="formulario">
+        <label for="nombre">Nombre de la tarea</label>
+        <div class="controles">
+          <input
+            type="text"
+            id="nombre"
+            placeholder="Ejemplo: Estudiar para el examen de JavaScript"
+            maxlength="100"
+            required>
+          <button type="submit">Agregar tarea</button>
+        </div>
+      </form>
+      <p id="mensaje" role="status"></p>
+    </section>
+
+    <section class="tarjeta">
+      <h2>Lista de tareas</h2>
+      <div class="resumen-contadores">
+        <span id="contador-pendientes" aria-live="polite">Pendientes: 0</span>
+        <span id="contador-completadas" aria-live="polite">Completadas: 0</span>
+      </div>
+      <p id="vacio">Todavía no tienes tareas.</p>
+      <ul id="lista"></ul>
+      <button id="btn-eliminar-completadas" class="btn-secundario" type="button" hidden>
+        Eliminar completadas
+      </button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
